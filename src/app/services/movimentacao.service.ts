@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const baseUrl = 'http://localhost:8080';
+export const baseUrl = process.env['ANGULAR_APP_BANKLINEAPI_URL'] ?? 'http://localhost:8080';
 
 @Injectable({
   providedIn: 'root'
